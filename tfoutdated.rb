@@ -11,7 +11,7 @@ class Tfoutdated < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/AnassKartit/tfoutdated/releases/download/v0.3.0/tfoutdated_0.3.0_darwin_amd64.tar.gz"
-      sha256 "cd979df366549b4b88b7de501ad7ff52cdae7d02311bd5fa947c8d63eb8148e6"
+      sha256 "abe5994c57b91354b26c8cd8f5207bc1e4ecec235dfd815778b31dc5702a2d47"
 
       define_method(:install) do
         bin.install "tfoutdated"
@@ -20,7 +20,7 @@ class Tfoutdated < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/AnassKartit/tfoutdated/releases/download/v0.3.0/tfoutdated_0.3.0_darwin_arm64.tar.gz"
-      sha256 "442d08e663e249425540dfb27535944c60c43b49611823ac4bea925e97df30d3"
+      sha256 "78fc6fcf82f0c2c5de694d66d5de1d168a7988adf5e2c36cb9940e728b0b23e3"
 
       define_method(:install) do
         bin.install "tfoutdated"
@@ -32,7 +32,7 @@ class Tfoutdated < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/AnassKartit/tfoutdated/releases/download/v0.3.0/tfoutdated_0.3.0_linux_amd64.tar.gz"
-      sha256 "5106289ef4901f9357517f152ec253e6b36f3ba270d201c960b7fc4a7d489861"
+      sha256 "55a2830ac10b912e7b8e1efc5bca3758c437f8a0621d1bfdf55a6aff601b639f"
       define_method(:install) do
         bin.install "tfoutdated"
         bin.install "tfoutdated-mcp" if File.exist?("tfoutdated-mcp")
@@ -40,7 +40,7 @@ class Tfoutdated < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/AnassKartit/tfoutdated/releases/download/v0.3.0/tfoutdated_0.3.0_linux_arm64.tar.gz"
-      sha256 "a68d2df611c9fb410ce0b5b2f1da51b6fd89c98ea174759c91b2328dffaea335"
+      sha256 "cc628bd03e19e91ba21ee36e025b93694592cd3c6c524acb5ade654243a5f5e1"
       define_method(:install) do
         bin.install "tfoutdated"
         bin.install "tfoutdated-mcp" if File.exist?("tfoutdated-mcp")
