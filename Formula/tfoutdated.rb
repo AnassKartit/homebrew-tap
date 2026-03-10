@@ -5,13 +5,13 @@
 class Tfoutdated < Formula
   desc "Detect outdated Terraform modules and providers with breaking change analysis"
   homepage "https://github.com/AnassKartit/tfoutdated"
-  version "0.4.0"
+  version "0.5.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/AnassKartit/tfoutdated/releases/download/v0.4.0/tfoutdated_0.4.0_darwin_amd64.tar.gz"
-      sha256 "f506863ab74feec2e3c58793f1ab57489e0bc8b5d3cffda089d7e85daa0d1dd1"
+      url "https://github.com/AnassKartit/tfoutdated/releases/download/v0.5.0/tfoutdated_0.5.0_darwin_amd64.tar.gz"
+      sha256 "71e43568b56d0988d341dc28ba5fa041eef367118df72e1830cf22c4f710e8f6"
 
       define_method(:install) do
         bin.install "tfoutdated"
@@ -19,8 +19,8 @@ class Tfoutdated < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/AnassKartit/tfoutdated/releases/download/v0.4.0/tfoutdated_0.4.0_darwin_arm64.tar.gz"
-      sha256 "234ab632d19e39d3b145c410eaf8d6930540d4309746793454dc20d0138dae85"
+      url "https://github.com/AnassKartit/tfoutdated/releases/download/v0.5.0/tfoutdated_0.5.0_darwin_arm64.tar.gz"
+      sha256 "6eb3be3646066176410f164edee404333e8313c191fe192a582f621cb66e1cfc"
 
       define_method(:install) do
         bin.install "tfoutdated"
@@ -31,16 +31,16 @@ class Tfoutdated < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/AnassKartit/tfoutdated/releases/download/v0.4.0/tfoutdated_0.4.0_linux_amd64.tar.gz"
-      sha256 "6b85861be098e6c0fd35067bad275f48853cca58939ec3fc6dff0217149f4274"
+      url "https://github.com/AnassKartit/tfoutdated/releases/download/v0.5.0/tfoutdated_0.5.0_linux_amd64.tar.gz"
+      sha256 "fc2a407dcb0cb474928ac1e2d0b3b201d6adcee9abb2e6b5b3eeea175f592674"
       define_method(:install) do
         bin.install "tfoutdated"
         bin.install "tfoutdated-mcp" if File.exist?("tfoutdated-mcp")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/AnassKartit/tfoutdated/releases/download/v0.4.0/tfoutdated_0.4.0_linux_arm64.tar.gz"
-      sha256 "5f326066f5147b668ccc01851a143fd18a0426fa27a84b13458553e6364b7b16"
+      url "https://github.com/AnassKartit/tfoutdated/releases/download/v0.5.0/tfoutdated_0.5.0_linux_arm64.tar.gz"
+      sha256 "0d9e6a2489d068a31b4f6886e5bf95bbbadd5c3a7835397ff33f5a88e845d5da"
       define_method(:install) do
         bin.install "tfoutdated"
         bin.install "tfoutdated-mcp" if File.exist?("tfoutdated-mcp")
